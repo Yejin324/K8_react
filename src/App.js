@@ -1,4 +1,4 @@
-import MyClockTime from './02/MyClockTime';
+// import MyClockTime from './02/MyClockTime';
 import './App.css';
 import { FaHome } from "react-icons/fa";
 
@@ -9,8 +9,8 @@ import { FaHome } from "react-icons/fa";
 // import Lotto from './05/Lotto';
 // import FoodMain from './06/FoodMain';
 // import BoxOffice from './07/BoxOffice';
-import MyBox from './08/MyBox';
-
+// import MyBox from './08/MyBox';
+import Traffic from './09/Traffic';
 function App() {
   return (
     <div className="w-full xl:w-10/12 h-screen mx-auto
@@ -36,7 +36,8 @@ function App() {
         {/* <Lotto /> */}
         {/* <FoodMain /> */}
         {/* <BoxOffice /> */}
-        <MyBox />
+        {/* <MyBox /> */}
+        <Traffic />
       </main>
       <footer className='w-full h-20
                          flex justify-center items-center
