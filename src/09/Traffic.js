@@ -20,7 +20,6 @@ export default function Traffic() {
       console.log('url = ', url);
   }
 
-
   //[]로 비워뒀기 때문에, 맨 처음 한 번만 실행됨.
   useEffect(()=>{
     getFetchData();
