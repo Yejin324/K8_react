@@ -10,7 +10,10 @@ import { FaHome } from "react-icons/fa";
 // import FoodMain from './06/FoodMain';
 // import BoxOffice from './07/BoxOffice';
 // import MyBox from './08/MyBox';
-import Traffic from './09/Traffic';
+// import Traffic from './09/Traffic' ;
+// import MyRef from './10/MyRef';
+// import Gallery from './11/Gallery';
+import Festival from './12/Festival';
 function App() {
   return (
     <div className="w-full xl:w-10/12 h-screen mx-auto
@@ -26,7 +29,7 @@ function App() {
           <FaHome />
         </p>
       </header>
-      <main className='w-full grow
+      <main className='w-full flex-grow
                        flex flex-col items-center
                        overflow-y-auto'>
 
@@ -37,9 +40,12 @@ function App() {
         {/* <FoodMain /> */}
         {/* <BoxOffice /> */}
         {/* <MyBox /> */}
-        <Traffic />
+        {/* <Traffic /> */}
+        {/* <MyRef /> */}
+        {/* <Gallery /> */}
+        <Festival />
       </main>
-      <footer className='w-full h-20
+      <footer className='w-full h-20 flex-shrink-0
                          flex justify-center items-center
                          bg-black text-white'>
         <p>K-digital 8기 천예진 화이팅</p>                  
