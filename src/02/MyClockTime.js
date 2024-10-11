@@ -9,7 +9,7 @@ function MyClockTime() {
       setCTime(new Date());
     }, 1000);
 
-    return clearInterval(tm);
+    return () => {clearInterval(tm)};
   }, []);
 
   return(

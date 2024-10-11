@@ -1,0 +1,23 @@
+import TailButton from "../UI/TailButton"
+import { useNavigate } from "react-router-dom"
+
+export default function RouteNav() {
+  const navigate = useNavigate();
+
+  return (
+    <div className="w-10/12 grid grid-cols-3 gap-2">
+        <TailButton caption = 'HOME'
+                    color = 'blue'
+                    handleClick = {() => navigate('/')}
+                    size = 'w-full'/>         
+        <TailButton caption = 'Page1'
+                    color = 'blue'
+                    handleClick = {() => navigate('/p1')}
+                    size = 'w-full'/>         
+        <TailButton caption = 'Page2'
+                    color = 'blue'
+                    handleClick = {() => navigate('/p2')}
+                    size = 'w-full'/>         
+    </div>
+  )
+}

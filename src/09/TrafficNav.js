@@ -13,7 +13,7 @@ export default function TrafficNav({title, c, sel, setSel}) {
   );
 
   return (
-    <div className='w-full bg-blue-50 p-2 m-1
+    <div className='w-full h-1/2 p-2 m-1
                     flex justify-between items-center
                     '>
       <div className='w-1/5 text-2xl font-bold

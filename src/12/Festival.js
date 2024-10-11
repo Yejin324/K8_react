@@ -23,20 +23,21 @@ export default function Festival() {
 
   const selectClick = () => {
     console.log('select = ', x.current.value);
-    let tm = tdata.filter(i => i['GUGUN_NM'] === x.current.value).map(i => <TailCard2 key = {i.UC_SEQ}
-                                                                                     imgUrl = {i.MAIN_IMG_NORMAL} //사진
-                                                                                     title = {i.TITLE} //제목
-                                                                                     content = {i.TRFC_INFO} //교통편 정보
-                                                                                     kw = {i.USAGE_DAY_WEEK_AND_TIME} //축제일정 
-                                                                                     onClick={() => window.open(i.HOMEPAGE_URL, '_blank')} 
-                                                                                     /> )
+    let tm = tdata.filter(i => i['GUGUN_NM'] === x.current.value)
+                  .map(i => <TailCard2 key = {i.UC_SEQ}
+                                       imgUrl = {i.MAIN_IMG_NORMAL} //사진
+                                       title = {i.TITLE} //제목
+                                       content = {i.TRFC_INFO} //교통편 정보
+                                       kw = {i.USAGE_DAY_WEEK_AND_TIME} //축제일정 
+                                       onClick={() => window.open(i.HOMEPAGE_URL, '_blank')} 
+                                       /> )
     setTags(tm);
   }
 
   useEffect(() => {
     getFetchData();
     console.log('tdata',tdata);
-  }, [])
+  }, []);
 
   useEffect(() => {
     let tm = tdata.map(item => item['GUGUN_NM'] );

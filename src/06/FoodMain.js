@@ -29,7 +29,7 @@ export default function FoodMain() {
 
   return (
     <div className='w-full h-screen flex flex-col justify-start'>
-      <div className='w-full h-20 bg-blue-100
+      <div className='w-full h-20 bg-blue-100 flex-shrink-0
                       flex justify-center items-center'>
         {bts}
       </div>

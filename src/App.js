@@ -3,54 +3,86 @@ import './App.css';
 import { FaHome } from "react-icons/fa";
 
 // import Hello from './01/Hello' ;
-// import MyClock from './02/MyClock' ;
+import MyClock from './02/MyClock' ;
 // import MyDiv1 from './03/MyDiv1';
 // import MyList from './04/MyList';
-// import Lotto from './05/Lotto';
-// import FoodMain from './06/FoodMain';
-// import BoxOffice from './07/BoxOffice';
+import Lotto from './05/Lotto';
+import FoodMain from './06/FoodMain';
+import BoxOffice from './07/BoxOffice';
 // import MyBox from './08/MyBox';
-// import Traffic from './09/Traffic' ;
+import Traffic from './09/Traffic' ;
 // import MyRef from './10/MyRef';
-// import Gallery from './11/Gallery';
+import Gallery from './11/Gallery';
 import Festival from './12/Festival';
+// import RouteMain from './13/RouteMain';
+
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+
 function App() {
   return (
+    <BrowserRouter>
     <div className="w-full xl:w-10/12 h-screen mx-auto
                     flex flex-col justify-center items-center">
       <header className='w-full h-20
                          flex justify-between items-center
-                         bg-slate-200'>
-        <div>
+                         bg-slate-200 flex-shrink-0'>
+        <div className='w-2/12'>
+          <Link to='/'>
           <p className="text-xl font-bold pl-3">REACT BASIC</p>  
           <p className="text-xs pl-3">K8기 DIGITAL TRAINING</p>
+          </Link>
         </div>
-        <p className='text-4xl font-bold p-5'>
+        <ul className='w-8/12 font-bold
+                       flex flex-row justify-between items-center'>
+          <li className='p-2 hover:bg-slate-400 rounded-md'><Link to='/MyClock'>시계</Link></li>
+          <li className='p-2 hover:bg-slate-400 rounded-md'><Link to='/Lotto'>로또생성기</Link></li>
+          <li className='p-2 hover:bg-slate-400 rounded-md'><Link to='/FoodMain'>푸드뱅크</Link></li>
+          <li className='p-2 hover:bg-slate-400 rounded-md'><Link to='/BoxOffice'>박스오피스</Link></li>
+          <li className='p-2 hover:bg-slate-400 rounded-md'><Link to='/Traffic'>교통사고</Link></li>
+          <li className='p-2 hover:bg-slate-400 rounded-md'><Link to='/Gallery'>관광</Link></li>
+          <li className='p-2 hover:bg-slate-400 rounded-md'><Link to='/Festival'>축제</Link></li>
+        </ul>
+        <p className='w-2/12 text-4xl font-bold p-5
+                      flex justify-end'>
+          <Link to='/'>
           <FaHome />
+          </Link>
         </p>
       </header>
-      <main className='w-full flex-grow
-                       flex flex-col items-center
-                       overflow-y-auto'>
 
-        {/* <MyDiv1 /> */}
-        {/* <MyClock /> */}
-        {/* <MyList /> */}
-        {/* <Lotto /> */}
-        {/* <FoodMain /> */}
-        {/* <BoxOffice /> */}
-        {/* <MyBox /> */}
-        {/* <Traffic /> */}
-        {/* <MyRef /> */}
-        {/* <Gallery /> */}
-        <Festival />
-      </main>
+        <main className='w-full flex-grow
+                        flex flex-col items-center
+                        overflow-y-auto'>
+        <Routes>
+          {/* <MyDiv1 /> */}
+          {/* <MyClock /> */}
+          {/* <MyList /> */}
+          {/* <Lotto /> */}
+          {/* <FoodMain /> */}
+          {/* <BoxOffice /> */}
+          {/* <MyBox /> */}
+          {/* <Traffic /> */}
+          {/* <MyRef /> */}
+          {/* <Gallery /> */}
+          {/* <Festival /> */}
+          {/* <RouteMain /> */}
+            <Route path='/MyClock' element={<MyClock />} />
+            <Route path='/Lotto' element={<Lotto />} />
+            <Route path='/FoodMain' element={<FoodMain />} />
+            <Route path='/BoxOffice' element={<BoxOffice />} />
+            <Route path='/Traffic' element={<Traffic />} />
+            <Route path='/Gallery' element={<Gallery />} />
+            <Route path='/Festival' element={<Festival />} />
+          </Routes>
+        </main>
+
       <footer className='w-full h-20 flex-shrink-0
                          flex justify-center items-center
                          bg-black text-white'>
         <p>K-digital 8기 천예진 화이팅</p>                  
       </footer>
     </div>
+    </BrowserRouter>
   );
 }
 

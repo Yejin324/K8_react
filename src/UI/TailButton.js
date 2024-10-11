@@ -1,7 +1,7 @@
 
 export default function TailButton({caption, color, handleClick, size}) {
   const btColor = {
-    'blue' : 'bg-blue-900' ,
+    'blue' : 'bg-blue-500' ,
     'orange' : 'bg-orange-600'
   };
 
