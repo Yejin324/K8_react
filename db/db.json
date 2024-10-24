@@ -9,6 +9,16 @@
       "id": "2",
       "title": "This is a comment1.",
       "author": "천예리"
+    },
+    {
+      "title": "소주 만 병만 주소주",
+      "author": "회문입니다.?",
+      "id": "01a8"
+    },
+    {
+      "title": "부1산2역3",
+      "author": "회문",
+      "id": "be0b"
     }
   ],
   "comments": [
@@ -22,7 +32,5 @@
       "body": "This is a comment2.",
       "postId": 1
     }
-
   ]
 }
-
